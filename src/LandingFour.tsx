@@ -1,7 +1,7 @@
 import { appSt } from "./style.css.ts";
 import { ButtonMobile } from "@alfalab/core-components/button/mobile";
-import icon from "./assets/icon_land_1.png";
-import image from "./assets/image_land_1.png";
+import icon from "./assets/icon_land_4.png";
+import image from "./assets/image_land_4.png";
 import chevron from "./assets/chevron_purple.png";
 import lock from "./assets/lock.png";
 import { Gap } from "@alfalab/core-components/gap";
