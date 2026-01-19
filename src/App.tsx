@@ -142,10 +142,10 @@ export const App = () => {
                 >
                   <Typography.Text
                     tag="p"
-                    view="primary-large"
+                    view="primary-medium"
                     style={{ marginBottom: 0, fontWeight: "500" }}
                   >
-                    Топ-привилегии
+                    Смарт-курсы
                   </Typography.Text>
                   <Status size={24} uppercase={false} className={appSt.status}>
                     Новое
@@ -373,8 +373,8 @@ export const App = () => {
                 <div style={{ display: "flex", gap: "1rem" }}>
                   <Typography.Text
                     tag="p"
-                    view="primary-large"
-                    style={{ marginBottom: 0 }}
+                    view="primary-medium"
+                    style={{ marginBottom: 0, fontWeight: "500" }}
                   >
                     Другие привилегии
                   </Typography.Text>
