@@ -76,8 +76,8 @@ export const App = () => {
   const [step, setStep] = useState(0);
 
   // const handleClickSubmit = () => {
-  //   window.gtag("event", "6977_get_sub", {
-  //     variant_name: "6977_1",
+  //   window.gtag("event", "6650_get_sub", {
+  //     variant_name: "6650_1",
   //   });
   //
   //   LS.setItem(LSKeys.ShowThx, true);
