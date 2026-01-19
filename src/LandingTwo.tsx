@@ -109,13 +109,13 @@ export const LandingTwo = ({ handleClick }: { handleClick: () => void }) => {
               padding: "16px",
               background: "white",
               borderRadius: "16px",
+              opacity: "0.5",
             }}
           >
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                opacity: "0.5",
               }}
             >
               <Typography.Text
