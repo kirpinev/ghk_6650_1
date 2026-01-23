@@ -6,8 +6,24 @@ import chevron from "./assets/chevron_purple.png";
 import lock from "./assets/lock.png";
 import { Gap } from "@alfalab/core-components/gap";
 import { Typography } from "@alfalab/core-components/typography";
+import { useState } from "react";
+
+const sduiLink =
+  "alfabank://sdui_screen?screenName=InvestmentLongread&fromCurrent=true&endpoint=v1/invest-main-screen-view/investment-longread/93194%3flocation=AM_MAIN%26campaignCode=01";
+
+const Redirect = () => {
+  window.location.href = sduiLink;
+
+  return null;
+};
 
 export const LandingThree = ({ handleClick }: { handleClick: () => void }) => {
+  const [click, setClick] = useState(false);
+
+  if (click) {
+    return <Redirect />;
+  }
+
   return (
     <>
       <div className={appSt.container}>
@@ -84,7 +100,10 @@ export const LandingThree = ({ handleClick }: { handleClick: () => void }) => {
               borderRadius: "16px",
             }}
           >
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div
+              style={{ display: "flex", justifyContent: "space-between" }}
+              onClick={() => setClick(true)}
+            >
               <Typography.Text
                 tag="p"
                 view="primary-medium"
