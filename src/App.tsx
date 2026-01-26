@@ -23,9 +23,7 @@ import chevron from "./assets/chevron.png";
 import slider2Hero from "./assets/slider2Hero.png";
 import background from "./assets/background.png";
 
-// import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
-// import { ThxLayout } from "./thx/ThxLayout";
 import { Gap } from "@alfalab/core-components/gap";
 import { useState } from "react";
 import { Status } from "@alfalab/core-components/status";
@@ -33,6 +31,7 @@ import { LandingOne } from "./LandingOne.tsx";
 import { LandingTwo } from "./LandingTwo.tsx";
 import { LandingThree } from "./LandingThree.tsx";
 import { LandingFour } from "./LandingFour.tsx";
+import { LS, LSKeys } from "./ls";
 
 type BenefitRowProps = {
   iconSrc: string;
@@ -71,8 +70,17 @@ const BenefitRow = ({ iconSrc, title, subtitle }: BenefitRowProps) => (
   </div>
 );
 
+const sduiLink =
+  "alfabank://sdui_screen?screenName=InvestmentLongread&fromCurrent=true&endpoint=v1/invest-main-screen-view/investment-longread/93194%3flocation=AM_MAIN%26campaignCode=01";
+
+const Redirect = () => {
+  window.location.href = sduiLink;
+
+  return null;
+};
+
 export const App = () => {
-  // const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
+  const [thxShow] = useState(LS.getItem(LSKeys.ShowThx, false));
   const [step, setStep] = useState(0);
 
   // const handleClickSubmit = () => {
@@ -84,9 +92,9 @@ export const App = () => {
   //   setThx(true);
   // };
 
-  // if (thxShow) {
-  //   return <ThxLayout />;
-  // }
+  if (thxShow) {
+    return <Redirect />;
+  }
 
   return (
     <>
