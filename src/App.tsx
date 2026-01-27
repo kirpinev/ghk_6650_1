@@ -161,7 +161,13 @@ export const App = () => {
                 </div>
                 <Gap size={16} />
                 <div
-                  onClick={() => setStep(1)}
+                  onClick={() => {
+                    setStep(1);
+                    window.gtag("event", "6650_course_click", {
+                      course_name: "Создание и продвижение бизнеса",
+                      variant_name: "6650_1",
+                    });
+                  }}
                   style={{
                     display: "flex",
                     gap: "1rem",
@@ -196,7 +202,13 @@ export const App = () => {
                   <img src={chevron} alt="" width={24} height={24} />
                 </div>
                 <div
-                  onClick={() => setStep(2)}
+                  onClick={() => {
+                    setStep(2);
+                    window.gtag("event", "6650_course_click", {
+                      course_name: "Личная эффективность",
+                      variant_name: "6650_1",
+                    });
+                  }}
                   style={{
                     display: "flex",
                     gap: "1rem",
@@ -231,7 +243,13 @@ export const App = () => {
                   <img src={chevron} alt="" width={24} height={24} />
                 </div>
                 <div
-                  onClick={() => setStep(3)}
+                  onClick={() => {
+                    setStep(3);
+                    window.gtag("event", "6650_course_click", {
+                      course_name: "AI в работе и жизни",
+                      variant_name: "6650_1",
+                    });
+                  }}
                   style={{
                     display: "flex",
                     gap: "1rem",
@@ -266,7 +284,13 @@ export const App = () => {
                   <img src={chevron} alt="" width={24} height={24} />
                 </div>
                 <div
-                  onClick={() => setStep(4)}
+                  onClick={() => {
+                    setStep(4);
+                    window.gtag("event", "6650_course_click", {
+                      course_name: "Бизнес на маркетплейсах",
+                      variant_name: "6650_1",
+                    });
+                  }}
                   style={{
                     display: "flex",
                     gap: "1rem",

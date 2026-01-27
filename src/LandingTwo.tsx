@@ -122,6 +122,12 @@ export const LandingTwo = ({ handleClick }: { handleClick: () => void }) => {
               tag="p"
               view="primary-small"
               style={{ marginBottom: 0, fontWeight: "500", color: "#BA3DD8" }}
+              onClick={() => {
+                window.gtag("event", "6650_start_study_click", {
+                  course_name: "Личная эффективность",
+                  variant_name: "6650_1",
+                });
+              }}
             >
               Начать обучение
             </Typography.Text>
@@ -305,7 +311,18 @@ export const LandingTwo = ({ handleClick }: { handleClick: () => void }) => {
       <Gap size={96} />
 
       <div className={appSt.bottomBtn}>
-        <ButtonMobile block view="primary" onClick={handleClick}>
+        <ButtonMobile
+          block
+          view="primary"
+          onClick={() => {
+            handleClick();
+
+            window.gtag("event", "6650_back_tolist_click", {
+              course_name: "Личная эффективность",
+              variant_name: "6650_1",
+            });
+          }}
+        >
           Вернуться к списку
         </ButtonMobile>
       </div>
