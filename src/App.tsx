@@ -83,15 +83,6 @@ export const App = () => {
   const [thxShow] = useState(LS.getItem(LSKeys.ShowThx, false));
   const [step, setStep] = useState(0);
 
-  // const handleClickSubmit = () => {
-  //   window.gtag("event", "6650_get_sub", {
-  //     variant_name: "6650_1",
-  //   });
-  //
-  //   LS.setItem(LSKeys.ShowThx, true);
-  //   setThx(true);
-  // };
-
   if (thxShow) {
     return <Redirect />;
   }
@@ -475,21 +466,6 @@ export const App = () => {
       {step === 2 && <LandingTwo handleClick={() => setStep(0)} />}
       {step === 3 && <LandingThree handleClick={() => setStep(0)} />}
       {step === 4 && <LandingFour handleClick={() => setStep(0)} />}
-
-      {/*<div*/}
-      {/*  className={appSt.bottomBtn}*/}
-      {/*  style={{*/}
-      {/*    padding: "16px",*/}
-      {/*    marginLeft: "16px",*/}
-      {/*    marginRight: "16px",*/}
-      {/*    marginBottom: "12px",*/}
-      {/*    width: "calc(100% - 32px)",*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <ButtonMobile block view="primary" onClick={handleClickSubmit}>*/}
-      {/*    Мне подходит*/}
-      {/*  </ButtonMobile>*/}
-      {/*</div>*/}
     </>
   );
 };
